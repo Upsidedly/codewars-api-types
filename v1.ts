@@ -1,6 +1,3 @@
-/**
- * User interface returned by  `/users/{user}` endpoint
- */
 export interface User {
   /**
    * Username of the user.
@@ -42,7 +39,7 @@ export interface User {
   };
 }
 
-export type ColorString =
+export type ColourString =
   | "white"
   | "yellow"
   | "blue"
@@ -239,7 +236,7 @@ export interface RankObject {
     /**
      * The color of the rank. Possible colors are `white` (7-8 kyu), `yellow` (5-6 kyu), `blue` (3-4 kyu), `purple` (1-2 kyu), `black` (1-4 dan), and `red` (5-8 dan).
      */
-    color: ColorString;
+    color: ColourString;
     /**
      * The total score earned. This is the number that determines the rank.
      */
@@ -247,9 +244,15 @@ export interface RankObject {
 }
 
 export interface Ranks {
+  /**
+   * Overall rank.
+   */
   overall: RankObject;
+  /**
+   * Ranks for each language trained.
+   */
   languages: {
-    [K in OrString<LanguageString>]?: RankObject;
+    readonly [K in OrString<LanguageString>]?: RankObject;
   };
 }
 
