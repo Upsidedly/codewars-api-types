@@ -1,15 +1,20 @@
 {
   "name": "codewars-api-types",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "Up-to-date Codewars API typings for use in libraries.",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"🚀 No test needed\""
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "dependencies": {
-    "tslib": "^2.4.0"
-  }
+  "keywords": ["codewars", "api", "types", "typing"],
+  "author": "upsided",
+  "license": "GPL-3.0-or-later",
+  "exports": {
+    "./v1": {
+      "import": "./v1.js"
+    }
+  },
+  "type": "module",
+  "files": [
+    "v*.{js,js.map,d.ts,d.ts.map}"
+  ]
 }
