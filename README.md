@@ -1,4 +1,4 @@
-![](media/codewars-api-types2.png)
+![](https://raw.githubusercontent.com/Upsidedly/codewars-api-types/master/media/codewars-api-types2.png)
 
 ## Installation
 Install with [npm](https://www.npmjs.com) / [yarn](https://yarnpkg.com) / [pnpm](https://pnpm.js.org)
