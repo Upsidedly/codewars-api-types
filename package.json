@@ -1,11 +1,16 @@
 {
   "name": "codewars-api-types",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Up-to-date Codewars API typings for use in libraries.",
   "scripts": {
     "test": "echo \"🚀 No test needed\""
   },
-  "keywords": ["codewars", "api", "types", "typing"],
+  "keywords": [
+    "codewars",
+    "api",
+    "types",
+    "typing"
+  ],
   "author": "upsided",
   "license": "GPL-3.0-or-later",
   "exports": {
