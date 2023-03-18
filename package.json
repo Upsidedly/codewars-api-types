@@ -1,6 +1,6 @@
 {
     "name": "codewars-api-types",
-    "version": "1.0.2",
+    "version": "1.0.3",
     "description": "Up-to-date Codewars API typings for use in libraries.",
     "scripts": {
         "test": "echo \"🚀 No test needed\""
