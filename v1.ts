@@ -224,6 +224,8 @@ export type TagString =
   | "Web Scraping"
   | "Web3";
 
+export type RankName = `${number} kyu` | `${number} dan`
+
 export interface RankObject {
     /**
      * Rank in integer. `[-8, -1]` maps to kyu, `[1, 8]` maps to dan
@@ -232,7 +234,7 @@ export interface RankObject {
     /**
      * Either `{-rank} kyu` or `{rank} dan`.
      */
-    name: string;
+    name: RankName;
     /**
      * The color of the rank. Possible colors are `white` (7-8 kyu), `yellow` (5-6 kyu), `blue` (3-4 kyu), `purple` (1-2 kyu), `black` (1-4 dan), and `red` (5-8 dan).
      */
@@ -331,6 +333,21 @@ export interface AuthoredChallenge<Published extends boolean = boolean> {
   languages: OrString<LanguageString>[];
 }
 
+export interface CodeChallengeRankObject {
+  /**
+     * Rank in integer. `[-8, -1]` maps to kyu, `[1, 8]` maps to dan
+  */
+  id: number;
+  /**
+     * Either `{-rank} kyu` or `{rank} dan`.
+  */
+  name: RankName;
+  /**
+     * The color of the rank. Possible colors are `white` (7-8 kyu), `yellow` (5-6 kyu), `blue` (3-4 kyu), `purple` (1-2 kyu), `black` (1-4 dan), and `red` (5-8 dan).
+  */
+  color: ColourString
+}
+
 export interface CodeChallenge<Approved extends boolean = boolean> {
   /**
    * ID of the kata.
@@ -367,7 +384,7 @@ export interface CodeChallenge<Approved extends boolean = boolean> {
   /**
    * Object descring the rank of the kata if approved.
    */
-  rank: Approved extends true ? RankObject : undefined;
+  rank: Approved extends true ? CodeChallengeRankObject : undefined;
   /**
    * The author of the kata.
    */
