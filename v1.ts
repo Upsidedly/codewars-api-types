@@ -443,3 +443,15 @@ export interface UserIdentifier {
    */
   url: `http://www.codewars.com/users/${string}`;
 }
+
+export interface ClanMembers {
+  /**
+   * The amount of pages (`?page=`)
+   */
+  totalPages: number,
+  /**
+   * The total amount of members
+   */
+  totalCount: number,
+  data: User[]
+}
