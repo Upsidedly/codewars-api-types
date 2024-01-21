@@ -6,6 +6,9 @@
     "type": "git",
     "url": "https://github.com/Upsidedly/codewars-api-types.git"
   },
+  "devDependencies": {
+    "typescript": "^5.3.3"
+  },
   "exports": {
     "./v1": {
       "import": "./v1.js"
@@ -25,8 +28,5 @@
   "scripts": {
     "test": "echo \"🚀 No test needed\""
   },
-  "type": "module",
-  "devDependencies": {
-    "typescript": "^5.3.3"
-  }
+  "type": "module"
 }
